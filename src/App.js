@@ -18,6 +18,12 @@ function App() {
     });
   }, []);
 
+  clearList((e) => {
+    e.preventDefault();
+    $('#co2 > tr > td').remove();
+    $('#dates > tr > td').remove();
+  });
+
   return (
     <div className='container '>
       <div className='row justify-content-center pt-5'>
@@ -34,7 +40,12 @@ function App() {
       </div>
       <div className='row justify-content-center'>
         <div className='col-md-2 col-auto'>
-          <table className="table text-center">
+          <button className='button bg-primary' onClick={clearList}></button>
+        </div>
+        </div>
+      <div className='row justify-content-center'>
+        <div className='col-md-2 col-auto'>
+          <table id="co2" className="table text-center">
             <thead>
               <tr>
                 <th scope="col">History CO2</th>
@@ -49,7 +60,7 @@ function App() {
           </table>
         </div>
         <div className='col-md-2 col-auto'>
-          <table className="table text-center">
+          <table id="dates" className="table text-center">
             <thead>
               <tr>
                 <th scope="col">Time</th>
