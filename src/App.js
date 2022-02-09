@@ -18,10 +18,14 @@ function App() {
     });
   }, []);
 
-  clearList((e) => {
+  const clearList = ((e) => {
     e.preventDefault();
-    $('#co2 > tr > td').remove();
-    $('#dates > tr > td').remove();
+    let co2TableRef = document.getElementById('co2');
+    let co2tbody = co2TableRef.querySelectorAll("td");
+    let datesTableRef = document.getElementById('dates');
+    let datestbody = datesTableRef.querySelectorAll("td");
+    co2tbody.forEach(e => e.remove());
+    datestbody.forEach(e => e.remove());
   });
 
   return (
@@ -39,8 +43,8 @@ function App() {
         </span>
       </div>
       <div className='row justify-content-center'>
-        <div className='col-md-2 col-auto'>
-          <button className='button bg-primary' onClick={clearList}></button>
+        <div className='col-md-2 col-auto p-2 text-center'>
+          <button type="button" className='btn btn-secondary' onClick={clearList}>Clear History</button>
         </div>
         </div>
       <div className='row justify-content-center'>
