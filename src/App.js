@@ -11,10 +11,8 @@ function App() {
   useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
     socket.on("New Measurement", airQualitySensor => {
-      console.log(airQualitySensor);
       setMeasurements(prevMeasurements => [...prevMeasurements, airQualitySensor.measurement]);
       setDates(prevDates => [...prevDates, airQualitySensor.date]);
-      console.log(dates);
     });
   }, []);
 
@@ -46,7 +44,7 @@ function App() {
         <div className='col-md-2 col-auto p-2 text-center'>
           <button type="button" className='btn btn-secondary' onClick={clearList}>Clear History</button>
         </div>
-        </div>
+      </div>
       <div className='row justify-content-center'>
         <div className='col-md-2 col-auto'>
           <table id="co2" className="table text-center">
