@@ -33,7 +33,7 @@ function App() {
         </span>
       </div>
       <div className='row justify-content-center'>
-        <div className='col-auto'>
+        <div className='col-md-2 col-auto'>
           <table className="table text-center">
             <thead>
               <tr>
@@ -48,7 +48,7 @@ function App() {
             </tbody>
           </table>
         </div>
-        <div className='col-auto'>
+        <div className='col-md-2 col-auto'>
           <table className="table text-center">
             <thead>
               <tr>
