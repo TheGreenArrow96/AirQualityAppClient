@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-const ENDPOINT = "http://localhost:4001";
+const ENDPOINT = "https://app-air-quality.herokuapp.com";
 
 function App() {
   const [measurements, setMeasurements] = useState([]);
