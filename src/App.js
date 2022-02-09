@@ -22,9 +22,9 @@ function App() {
     <div className='container '>
       <div className='row justify-content-center pt-5'>
         <span className="col-md-4 badge bg-info ">
-          <span className='text-white'> {"Green: the quality of the air is good "} </span> <br></br>
-          <span className='text-white'> {"Yellow: the quality of the air could be better"} </span> <br></br>
-          <span className='text-white'> {"Red: the quality of the air is bad"} </span>
+          <span className='text-white'> <span className='text-success'>Green:</span> the quality of the air is good  </span> <br></br>
+          <span className='text-white'> <span className='text-warning'>Yellow:</span> the quality of the air could be better </span> <br></br>
+          <span className='text-white'> <span className='text-danger'>Red:</span> the quality of the air is bad </span>
           <h1 className="pt-3 pb-3">Actual CO2:{" "}
             <span className={measurements[measurements.length - 1] <= 1000 ? 'text-success' : measurements[measurements.length - 1] > 2000 ? 'text-danger' : 'text-warning'}>
               {measurements[measurements.length - 1]}
